@@ -20,7 +20,7 @@ public class EventController {
 	@Autowired
 	private KafkaLogPublisher kafkaLogPublisher;
 
-	@GetMapping("publish/{message}")
+	@GetMapping("/publish/{message}")
 	public ResponseEntity<?> publishMessage(@PathVariable String message) {
 
 		try {
