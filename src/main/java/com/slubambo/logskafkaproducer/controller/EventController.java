@@ -25,7 +25,9 @@ public class EventController {
 
 		try {
 
-			kafkaLogPublisher.sendMessageToTopic(message);
+			for (int i = 0; i <= 10000; i++) {
+				kafkaLogPublisher.sendMessageToTopic(message + " : " + i);
+			}
 
 			return ResponseEntity.ok("Message published");
 

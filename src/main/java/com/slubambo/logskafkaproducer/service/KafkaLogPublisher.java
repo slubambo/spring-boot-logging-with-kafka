@@ -15,7 +15,7 @@ public class KafkaLogPublisher {
 
 	public void sendMessageToTopic(String message) {
 
-		CompletableFuture<SendResult<String, Object>> future = template.send("test-topic", message);
+		CompletableFuture<SendResult<String, Object>> future = template.send("simon-topic-1", message);
 
 		future.whenComplete((result, ex) -> {
 
@@ -29,8 +29,6 @@ public class KafkaLogPublisher {
 			}
 
 		});
-
-		System.out.println("fsfdf");
 
 	}
 
